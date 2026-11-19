@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>糖心vlog - 高清短视频分享平台_免费在线观看热门Vlog、美食、旅行、生活记录</title>
+<meta name="keywords" content="糖心vlog,糖心vlog官网,糖心视频,短视频平台,vlog视频,生活记录,美食视频,旅行视频,日常vlog,原创视频,创作者社区,高清视频">
+<meta name="description" content="糖心vlog是一个温暖的生活短视频社区，汇聚美食制作、旅行日记、日常vlog、萌宠瞬间等优质内容。在这里发现生活灵感，记录属于你的甜蜜时光。">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Helvetica Neue", Arial, sans-serif;
+  color: #3a3330;
+  background: #fdfaf6;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #d9803f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.wrap {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(253, 250, 246, 0.94);
+  border-bottom: 1px solid #f0e5d8;
+  backdrop-filter: blur(6px);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #b8611f;
+  letter-spacing: 0.5px;
+}
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffb877, #e8792f);
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+.nav-list a {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #6b5d52;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-list a:hover {
+  background: #fbe9d7;
+  color: #b8611f;
+  text-decoration: none;
+}
+.hero {
+  padding: 68px 0 56px;
+  background: radial-gradient(circle at 18% 20%, #fde6cf 0%, #fdfaf6 58%);
+  border-bottom: 1px solid #f4e9dc;
+}
+.hero-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #fbe9d7;
+  color: #b8611f;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: 38px;
+  line-height: 1.35;
+  color: #2f2823;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  max-width: 860px;
+}
+.hero-sub {
+  margin-top: 18px;
+  font-size: 17px;
+  color: #6b5d52;
+  max-width: 780px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.btn {
+  display: inline-block;
+  padding: 11px 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #f5a15c, #e2762a);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(226, 118, 42, 0.24);
+}
+.btn-ghost {
+  border: 1px solid #e6d3bf;
+  color: #8a6a4d;
+  background: #fff;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+.stat-card {
+  background: #fff;
+  border: 1px solid #f1e4d5;
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-align: center;
+}
+.stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #c9661f;
+}
+.stat-label {
+  font-size: 13px;
+  color: #8a7a6c;
+  margin-top: 4px;
+}
+section {
+  padding: 62px 0;
+}
+.section-alt {
+  background: #fbf3e9;
+}
+.section-head {
+  text-align: center;
+  margin-bottom: 42px;
+}
+h2 {
+  font-size: 28px;
+  color: #2f2823;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.section-head p {
+  margin-top: 12px;
+  color: #7d6d5f;
+  font-size: 15px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #f1e4d5;
+  border-radius: 16px;
+  padding: 26px 24px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(184, 97, 31, 0.1);
+}
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fbe9d7;
+  color: #c9661f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+h3 {
+  font-size: 18px;
+  color: #2f2823;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14.5px;
+  color: #7a6a5c;
+}
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.chip {
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: #fdf1e4;
+  color: #b0662a;
+  font-size: 13px;
+  border: 1px solid #f4e0c9;
+}
+.hot-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.hot-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #f1e4d5;
+  border-radius: 14px;
+  padding: 20px;
+}
+.hot-rank {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd0a1, #f0994d);
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hot-item h4 {
+  font-size: 16px;
+  color: #2f2823;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.hot-item p {
+  font-size: 14px;
+  color: #7a6a5c;
+}
+.meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #96857a;
+}
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  counter-reset: step;
+}
+.flow-step {
+  background: #fff;
+  border: 1px solid #f1e4d5;
+  border-radius: 14px;
+  padding: 24px 20px;
+  position: relative;
+}
+.flow-step::before {
+  counter-increment: step;
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fbe9d7;
+  color: #c9661f;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.flow-step h4 {
+  font-size: 16px;
+  color: #2f2823;
+  margin-bottom: 8px;
+}
+.flow-step p {
+  font-size: 14px;
+  color: #7a6a5c;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid #f1e4d5;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 14px;
+}
+.faq-item h3 {
+  font-size: 16.5px;
+  margin-bottom: 8px;
+}
+.faq-item p {
+  font-size: 14.5px;
+  color: #7a6a5c;
+}
+.quote-band {
+  background: linear-gradient(135deg, #fdf0e1, #fbf7f1);
+  border: 1px solid #f2e3d1;
+  border-radius: 18px;
+  padding: 34px 30px;
+  text-align: center;
+}
+.quote-band p {
+  font-size: 17px;
+  color: #8a6a4d;
+  line-height: 1.9;
+}
+.site-footer {
+  background: #33291f;
+  color: #cfc2b4;
+  padding: 46px 0 26px;
+  font-size: 14px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #4a3c2e;
+}
+.site-footer h4 {
+  color: #f4e6d4;
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.site-footer p {
+  color: #b6a897;
+  line-height: 1.9;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  color: #cfc2b4;
+}
+.footer-links a:hover {
+  color: #f4c894;
+  text-decoration: none;
+}
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  color: #9c8e7f;
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  h1 {
+    font-size: 29px;
+  }
+  .grid-3,
+  .hero-stats,
+  .flow,
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hot-list,
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .grid-3,
+  .hero-stats,
+  .flow,
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  section {
+    padding: 44px 0;
+  }
+  .hero {
+    padding: 44px 0 40px;
+  }
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand"><span class="brand-mark">糖</span><span>糖心vlog</span></div>
+    <nav aria-label="主导航">
+      <ul class="nav-list">
+        <li><a href="#about">平台介绍</a></li>
+        <li><a href="#categories">内容分类</a></li>
+        <li><a href="#hot">热门板块</a></li>
+        <li><a href="#creator">创作者</a></li>
+        <li><a href="#experience">观看体验</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="about">
+    <div class="wrap">
+      <span class="hero-tag">生活短视频社区</span>
+      <h1>糖心vlog 高清短视频分享平台，记录每一份甜蜜日常</h1>
+      <p class="hero-sub">糖心vlog 是一个温暖的生活短视频社区，汇聚美食制作、旅行日记、日常vlog、萌宠瞬间等优质内容。在这里发现生活灵感，记录属于你的甜蜜时光。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#categories">浏览内容分类</a>
+        <a class="btn btn-ghost" href="#hot">查看热门板块</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card"><div class="stat-num">12+</div><div class="stat-label">内容分类</div></div>
+        <div class="stat-card"><div class="stat-num">4K</div><div class="stat-label">高清画质支持</div></div>
+        <div class="stat-card"><div class="stat-num">7×24</div><div class="stat-label">内容持续更新</div></div>
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">正向生活分享</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>关于糖心vlog：为什么值得停留</h2>
+        <p>把散落在日常里的温柔瞬间，整理成可以被反复观看的短视频</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">01</div>
+          <h3>真实的生活记录</h3>
+          <p>糖心vlog 更看重镜头里的真实感。清晨的一杯手冲咖啡、傍晚的菜市场、周末的短途出行，都在创作者的镜头中被认真对待，让每一次观看都能找到与自己生活相似的影子。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">02</div>
+          <h3>清晰舒适的画质</h3>
+          <p>平台对视频清晰度与播放流畅度进行持续优化，支持从标清到高清的多档画质选择，配合自适应加载策略，在网络条件变化时也能保持顺畅的观看体验。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">03</div>
+          <h3>温和友善的氛围</h3>
+          <p>糖心视频鼓励理性、友好的交流方式。内容审核与社区规范以正向引导为主，让分享者愿意持续创作，也让观看者在评论区里获得的是鼓励而非压力。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">04</div>
+          <h3>轻松的浏览节奏</h3>
+          <p>首页以信息流形式组织内容，配合简洁的频道入口与搜索方式，帮助你在碎片时间里快速找到想看的方向，不必在复杂的层级里反复跳转。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">05</div>
+          <h3>创作者友好机制</h3>
+          <p>从上传、封面编辑到标签设置，创作流程被尽量简化。平台同时提供播放数据参考，帮助创作者了解内容表现，持续调整选题方向与拍摄节奏。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">06</div>
+          <h3>多端观看衔接</h3>
+          <p>页面采用响应式布局，手机、平板与桌面浏览器均可获得完整的浏览体验，收藏与观看记录清晰可见，换设备继续观看也不必重新查找。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>内容分类：从生活细节出发</h2>
+        <p>围绕吃、住、行、玩、爱与成长，糖心vlog 把内容整理成清晰的方向</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">食</div>
+          <h3>美食制作</h3>
+          <p>家常小炒、烘焙甜点、一人食晚餐与季节限定饮品，步骤讲解清楚，镜头贴近操作细节，适合跟着做也适合饭点观看。</p>
+          <div class="chip-row"><span class="chip">家常菜</span><span class="chip">烘焙</span><span class="chip">咖啡</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">行</div>
+          <h3>旅行日记</h3>
+          <p>城市漫步、山野徒步、海岛假期与周末周边游，用短视频记录路线、风景与在地体验，给下一次出发提供参考。</p>
+          <div class="chip-row"><span class="chip">City Walk</span><span class="chip">露营</span><span class="chip">周边游</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">居</div>
+          <h3>居家与收纳</h3>
+          <p>小户型改造、房间整理、软装搭配与日常家务技巧，把居住空间打理得更舒适，也让生活节奏更从容。</p>
+          <div class="chip-row"><span class="chip">收纳</span><span class="chip">软装</span><span class="chip">好物</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">宠</div>
+          <h3>萌宠瞬间</h3>
+          <p>猫咪的午后阳光、狗狗的第一次出门、宠物日常护理与相处小方法，镜头里全是不需要台词就能被感染的快乐。</p>
+          <div class="chip-row"><span class="chip">猫咪</span><span class="chip">狗狗</span><span class="chip">养宠日常</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">记</div>
+          <h3>日常vlog</h3>
+          <p>上班通勤、周末计划、读书观影与季节变化，把普通的一天剪成有节奏的短片，让日常本身成为值得记录的内容。</p>
+          <div class="chip-row"><span class="chip">上班日常</span><span class="chip">周末</span><span class="chip">读书</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">艺</div>
+          <h3>手作与兴趣</h3>
+          <p>手账排版、编织、插花、乐器练习与绘画过程，记录从生疏到熟练的过程，也记录专注投入时的那份安静。</p>
+          <div class="chip-row"><span class="chip">手账</span><span class="chip">插花</span><span class="chip">乐器</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hot">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>热门板块：正在被反复观看的内容方向</h2>
+        <p>以下板块长期保持较高观看与收藏量，适合初次来到糖心vlog 的访客按兴趣浏览</p>
+      </div>
+      <div class="hot-list">
+        <article class="hot-item">
+          <span class="hot-rank">01</span>
+          <div>
+            <h4>一人食的晚餐仪式感</h4>
+            <p>从备菜到下锅，控制在十分钟左右的完整流程，适合工作日晚上照着做，也适合在饭前找一点灵感。</p>
+            <div class="meta-line"><span>美食制作</span><span>步骤清晰</span><span>适合新手</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <span class="hot-rank">02</span>
+          <div>
+            <h4>周末城市漫步路线</h4>
+            <p>老街、书店、咖啡馆与河边步道串联成半日路线，画面稳定、节奏舒缓，适合当作出行前的路线参考。</p>
+            <div class="meta-line"><span>旅行日记</span><span>路线可复现</span><span>半日行程</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <span class="hot-rank">03</span>
+          <div>
+            <h4>小空间收纳改造纪实</h4>
+            <p>从测量、清空到重新归位，把有限的居住面积整理出更多可用空间，前后对比直观，方法也便于迁移。</p>
+            <div class="meta-line"><span>居家收纳</span><span>前后对比</span><span>方法可迁移</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <span class="hot-rank">04</span>
+          <div>
+            <h4>宠物日常陪伴记录</h4>
+            <p>记录宠物从清晨到夜晚的小情绪与小习惯，画面轻快、配乐柔和，是很多用户放松情绪时优先打开的方向。</p>
+            <div class="meta-line"><span>萌宠瞬间</span><span>情绪治愈</span><span>轻松观看</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <span class="hot-rank">05</span>
+          <div>
+            <h4>季节限定的生活提案</h4>
+            <p>换季收纳、应季食材、时令出行与节气小习俗，围绕时间变化整理出适合当下的生活方式建议。</p>
+            <div class="meta-line"><span>生活记录</span><span>应季主题</span><span>轻量实用</span></div>
+          </div>
+        </article>
+        <article class="hot-item">
+          <span class="hot-rank">06</span>
+          <div>
+            <h4>兴趣养成的长期记录</h4>
+            <p>以月为单位记录一项兴趣的进展，把不显眼的进步拍成连续的短片，给同样想开始的人一点温和的推动。</p>
+            <div class="meta-line"><span>手作兴趣</span><span>长期记录</span><span>成长向</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="creator">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>创作者社区：把镜头交给生活本身</h2>
+        <p>糖心vlog 希望创作不是负担，而是把喜欢的事情顺手记录下来</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">
+          <h4>确定选题</h4>
+          <p>从最近在做的、在吃的、在去的地方找题目，选题越贴近自身经验，内容越容易拍得自然。</p>
+        </div>
+        <div class="flow-step">
+          <h4>拍摄素材</h4>
+          <p>手机即可完成拍摄，注意光线方向与画面稳定，多留几段环境与细节空镜，后期剪辑会更从容。</p>
+        </div>
+        <div class="flow-step">
+          <h4>剪辑上传</h4>
+          <p>控制单条时长、保留关键步骤、挑选封面首帧，配上合适的标签与分类，方便同好找到你的内容。</p>
+        </div>
+        <div class="flow-step">
+          <h4>复盘互动</h4>
+          <p>参考播放与收藏数据，阅读评论里的真实反馈，把有效的方法保留下来，用于下一条内容。</p>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top:26px;">
+        <article class="card">
+          <h3>创作规范与版权意识</h3>
+          <p>发布内容需为本人拍摄或已获得授权的素材，背景音乐使用平台提供的曲库或已获授权作品。涉及他人肖像、私人场所与未成年人内容时，应先取得同意并做必要保护处理，避免暴露具体住址、证件与联系方式等隐私信息。</p>
+        </article>
+        <article class="card">
+          <h3>社区交流的基本共识</h3>
+          <p>评论区鼓励具体、友善、有信息量的表达。对于不同类型的生活方式保持尊重，不进行人身攻击与地域对立，不传播未经核实的信息，共同维持一个可以放心分享的交流环境。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>观看体验：让浏览这件事更省心</h2>
+        <p>从进入页面到看完一条视频，糖心vlog 尽量把不必要的步骤减到最少</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">播</div>
+          <h3>流畅播放</h3>
+          <p>采用自适应码率加载，弱网环境自动降低清晰度以保持连续播放，网络恢复后再逐步提升画质，减少反复缓冲带来的打断感。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">找</div>
+          <h3>快速定位</h3>
+          <p>支持按分类频道浏览，也可以使用关键词搜索标题与标签，配合清晰的内容卡片展示，缩短从想法到找到视频的时间。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">藏</div>
+          <h3>收藏与回顾</h3>
+          <p>喜欢的视频可以加入收藏，方便在做菜、出行或整理房间前集中回看，让短视频真正成为可用的生活参考。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">夜</div>
+          <h3>舒适视觉</h3>
+          <p>整体配色以温和的暖色为主，降低长时间浏览的视觉负担；文字与背景保持足够对比度，阅读标题与说明更清楚。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">净</div>
+          <h3>简洁界面</h3>
+          <p>页面结构以内容为中心，减少无关元素的干扰，导航与分区清晰，新访客也能快速理解当前所在位置与可去的方向。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">安</div>
+          <h3>内容安全</h3>
+          <p>对上传内容进行规范审核，对不适宜内容做下架处理，并提供反馈入口，让用户参与到社区环境的共同维护中。</p>
+        </article>
+      </div>
+      <div class="quote-band" style="margin-top:34px;">
+        <p>记录不是为了被很多人看见，而是让某一天的生活有迹可循。<br>在糖心vlog，每一次按下录制，都是给平凡日子的一次温柔确认。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>关于糖心vlog 的使用方式，集中解答几个被反复问到的问题</p>
+      </div>
+      <div class="faq-item">
+        <h3>糖心vlog 是什么类型的内容平台</h3>
+        <p>糖心vlog 是一个以生活记录为核心的短视频分享社区，内容围绕美食、旅行、居家、萌宠、日常vlog 与兴趣爱好展开，整体风格偏温和治愈，适合在碎片时间浏览。</p>
+      </div>
+      <div class="faq-item">
+        <h3>观看视频需要注册账号吗</h3>
+        <p>浏览公开内容无需注册即可进行。若需要收藏视频、保存观看记录或参与评论互动，则建议创建账号，以便在不同设备之间同步个人使用偏好。</p>
+      </div>
+      <div class="faq-item">
+        <h3>平台支持哪些画质与设备</h3>
+        <p>视频提供多档清晰度选择，页面本身采用响应式设计，在手机、平板与桌面浏览器上均可正常浏览，切换设备后布局会自动适配当前屏幕。</p>
+      </div>
+      <div class="faq-item">
+        <h3>如何上传自己的 vlog 作品</h3>
+        <p>完成账号注册后，按照上传入口选择本地视频文件，填写标题、简介与标签并选择合适分类，设置封面后提交即可。审核通过后内容会出现在对应频道中。</p>
+      </div>
+      <div class="faq-item">
+        <h3>内容推荐是根据什么排序的</h3>
+        <p>推荐会综合内容热度、观看完成度、收藏与互动情况以及分类偏好等因素，尽量把与当前兴趣相关的内容排在前面，同时保留一定比例的新内容曝光机会。</p>
+      </div>
+      <div class="faq-item">
+        <h3>遇到不适宜内容或侵权素材怎么办</h3>
+        <p>可以在对应内容页面通过反馈入口提交说明，平台会根据社区规范进行核实与处理。涉及版权或肖像权的问题，请提供可核验的依据，便于更快跟进。</p>
+      </div>
+      <div class="faq-item">
+        <h3>为什么有时会出现加载较慢的情况</h3>
+        <p>播放速度与本地网络状况、当前时段访问量有关。遇到缓冲时间较长时，可尝试切换清晰度或稍后重新打开页面，通常可以恢复正常播放。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>糖心vlog</h4>
+        <p>一个温暖的生活短视频社区，汇聚美食制作、旅行日记、日常vlog 与萌宠瞬间。用真实的镜头记录日常，让平凡的一天也值得被认真保存。</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul class="footer-links">
+          <li><a href="#about">平台介绍</a></li>
+          <li><a href="#categories">内容分类</a></li>
+          <li><a href="#hot">热门板块</a></li>
+          <li><a href="#creator">创作者与观看体验</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>内容方向</h4>
+        <ul class="footer-links">
+          <li><a href="#categories">美食制作</a></li>
+          <li><a href="#categories">旅行日记</a></li>
+          <li><a href="#categories">居家收纳</a></li>
+          <li><a href="#categories">萌宠瞬间</a></li>
+          <li><a href="#categories">日常vlog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">糖心vlog · 生活短视频内容分享 · 本站为内容展示页面，所有内容均以正向生活记录为主题</div>
+  </div>
+</footer>
+</body>
+</html>
